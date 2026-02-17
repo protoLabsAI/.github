@@ -35,7 +35,7 @@ Operations and engineering branches with scoped execution contexts, trust bounda
 - **[docs.protolabs.studio](https://docs.protolabs.studio)** — Documentation
 - **[@protoLabsAI](https://x.com/protoLabsAI)** — X / Twitter
 - **[protoLabsTV](https://twitch.tv/protoLabsTV)** — Twitch
-- **[Substack](https://substack.com/@thoughtsbyjoshmabry)** — Blog
+- **[Substack](https://substack.com/@protolabsai)** — Blog
 
 ---
 
