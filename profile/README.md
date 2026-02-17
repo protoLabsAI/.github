@@ -8,7 +8,7 @@ protoLabs is an autonomous development studio where ideas become shipped softwar
 
 - **[protoLabs](https://protolabs.studio)** — The intelligent product engine. Kanban board + autonomous agents + CI pipeline. Source-available.
 - **[MythXEngine](https://mythxengine.com)** — AI-powered TTRPG engine.
-- **[SVGVal](https://svgval.com)** — SVG validation toolkit.
+- **SVGVal** — a generative SVG evaluation toolkit (shipping soon)
 
 Every product is built with protoLabs. The system builds itself.
 
@@ -27,7 +27,7 @@ Operations and engineering branches with scoped execution contexts, trust bounda
 | Commits                | 1,000+    |
 | Pull requests          | 700+      |
 | Features shipped       | 94        |
-| Agent cost per feature | $0.56 avg |
+| Agent cost per feature | $8.56 avg |
 
 ### Links
 
