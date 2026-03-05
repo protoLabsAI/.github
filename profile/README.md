@@ -24,9 +24,9 @@ Operations and engineering branches with scoped execution contexts, trust bounda
 
 | Metric                 | Value     |
 | ---------------------- | --------- |
-| Commits                | 1,000+    |
-| Pull requests          | 700+      |
-| Features shipped       | 94        |
+| Commits                | 4,000+    |
+| Pull requests          | 1700+      |
+| Features shipped       | 194        |
 | Agent cost per feature | $8.56 avg |
 
 ### Links
