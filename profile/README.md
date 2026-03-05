@@ -39,4 +39,4 @@ Operations and engineering branches with scoped execution contexts, trust bounda
 
 ---
 
-_Source-available. No subscriptions. $49 lifetime Pro. [Learn more](https://protolabs.studio)._
+_Source-available. No subscriptions. [Learn more](https://protolabs.studio)._
