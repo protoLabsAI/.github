@@ -4,7 +4,7 @@
 
 **We build systems that build themselves.** An indie studio running experiments in the open — and sharing the patterns that build them.
 
-We're two people and a fleet of agents that ships the work. We build games, simulators, and specialized agents on top of infrastructure we run ourselves, from the hardware up. The patterns that fall out of building them (orchestration, voice-as-code, release automation) get open-sourced as we go, for anyone who wants to read them and build their own.
+It's one person and a fleet of agents shipping the work. We build games, simulators, and specialized agents on top of infrastructure we run ourselves, from the hardware up. The patterns that fall out of building them (orchestration, voice-as-code, release automation) get open-sourced as we go, for anyone who wants to read them and build their own.
 
 ## Patterns you can take
 
@@ -55,7 +55,7 @@ Rough aggregates across the protoLabsAI org, from GitHub (May 2026):
 | Stack | TypeScript · Python · Rust |
 | Operator contributions, last 12 months | ~14,000 |
 
-Two people and a fleet of agents. We keep the numbers visible because a claim without one is just marketing.
+One person and a fleet of agents. We keep the numbers visible because a claim without one is just marketing.
 
 ## Where to find us
 
