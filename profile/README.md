@@ -13,7 +13,6 @@ Infrastructure we ship as patterns to study and steal, not products you wait on 
 - [`release-tools`](https://github.com/protoLabsAI/release-tools) — release-notes generator and Discord embed as one GitHub Action. Runs on every repo here.
 - [`rabbit-hole.io`](https://github.com/protoLabsAI/rabbit-hole.io) — research agent that turns a topic and a budget into a knowledge graph instead of a pile of links.
 - [`protoCLI`](https://github.com/protoLabsAI/protoCLI) — an AI agent that lives in your terminal.
-- [`protoPatch`](https://github.com/protoLabsAI/protoPatch) — reviews code, patches the bugs it finds, and lands the PR.
 - [`protoBanana`](https://github.com/protoLabsAI/protoBanana) — chat-native image generation and editing, served as an OpenAI-compatible provider on top of ComfyUI.
 - [`protoWorkstacean`](https://github.com/protoLabsAI/protoWorkstacean) — a pluggable pubsub bus for agentic action.
 
