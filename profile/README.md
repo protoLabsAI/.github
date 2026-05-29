@@ -2,7 +2,7 @@
 
 # protoLabs.studio
 
-**An AI-native indie studio with an open-source habit.** We build systems that build themselves.
+**We build systems that build themselves.** An indie studio running experiments in the open — and sharing the patterns that build them.
 
 We're two people and a fleet of agents that ships the work. We build games, simulators, and specialized agents on top of infrastructure we run ourselves, from the hardware up. The patterns that fall out of building them (orchestration, voice-as-code, release automation) get open-sourced as we go, for anyone who wants to read them and build their own.
 
