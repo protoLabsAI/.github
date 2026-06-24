@@ -18,7 +18,7 @@ Infrastructure we ship as patterns to study and steal, not products you wait on 
 
 ## The engine
 
-[`protoMaker`](https://github.com/protoLabsAI/protoMaker) is the dark factory: the orchestrator that ships most of what's here. Named agents pick features off a board, work in isolated git worktrees so they don't collide, and merge through the same CI any human PR goes through. A separate agent reviews the plan before code gets written, and the system escalates to a stronger model when a feature fails twice. 159 MCP tools wire it into the rest of the stack.
+[`protoAgent`](https://github.com/protoLabsAI/protoAgent) is the adaptable engine: a lean, A2A-native agent on LangGraph that ships a small core and grows at runtime instead of by forking. Capability arrives three ways — **plugins** install from a git URL (tools, subagents, MCP servers, console views), **skills** load on demand as the model needs them, and **delegate agents** route work out over A2A, the OpenAI-compatible API, or ACP, so it can spawn other coding agents (protoCLI, Claude Code) as subprocesses. Run one agent or orchestrate a fleet; drive it from the console, the API, or A2A. The boring parts — A2A spec handling, cost and extension emission, tracing, the release pipeline — stay stable across every agent, so forking is close to a rewrite of `SOUL.md` and a couple of files, not inheriting a pile.
 
 ## What runs it
 
@@ -30,9 +30,9 @@ The substrate the experiments sit on. Most of it stays private; the parts worth 
 
 ## What we build with it
 
+- **[ORBIS](https://orbis.protolabs.studio)** — a voice-first AI companion: an orb that talks, remembers you, and routes the heavy lifting to your agents. Live.
+- **[MythXEngine](https://mythxengine.com)** — a TTRPG world-and-story generator on mythxengine-sdk. Generate a world, then play it.
 - **PilotProtocol** — mech-vs-mech agents fighting on a hex grid, with a click-through replay viewer that shows each model's reasoning a move at a time.
-- **MythXEngine** — a TTRPG world-and-story generator built on mythxengine-sdk.
-- [`protoVoice`](https://github.com/protoLabsAI/protoVoice) — a full-duplex voice agent you can interrupt mid-sentence. Live at [voice.proto-labs.ai](https://voice.proto-labs.ai).
 
 ## How it works
 
