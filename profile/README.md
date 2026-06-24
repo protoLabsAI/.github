@@ -45,14 +45,14 @@ Every transition is a gate. Work that fails one goes back a step or escalates to
 
 ## By the numbers
 
-Rough aggregates across the protoLabsAI org, from GitHub (May 2026):
+Rough aggregates across the protoLabsAI org, from GitHub (June 2026):
 
 | | |
 |---|---|
-| Repositories | 82 (26 public, open to fork) |
-| Merged pull requests | 6,795 |
+| Repositories | 119 (56 public, open to fork) |
+| Merged pull requests | 9,440 |
 | Stack | TypeScript · Python · Rust |
-| Operator contributions, last 12 months | ~14,000 |
+| Operator contributions, last 12 months | ~27,000 |
 
 One person and a fleet of agents. We keep the numbers visible because a claim without one is just marketing.
 
