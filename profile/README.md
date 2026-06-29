@@ -20,9 +20,9 @@ Infrastructure we ship as patterns to study and steal, not products you wait on 
 
 We run 35B-class open models on a pair of prosumer GPUs, and the builds that make that possible — FP8 quants and speculative-decode heads — go up for anyone to pull. [`huggingface.co/protoLabsAI`](https://huggingface.co/protoLabsAI).
 
-- [`Ornith-1.0-9B-MTP`](https://huggingface.co/protoLabsAI/Ornith-1.0-9B-MTP) — a multi-token-prediction head for a 9B that shipped without one. Trained with KL-divergence against the target distribution to ~76% token acceptance, for a lossless +49–57% single-stream speedup (75 → 121 tok/s). MIT, with a [GGUF build](https://huggingface.co/protoLabsAI/Ornith-1.0-9B-MTP-GGUF) alongside.
+- [`Ornith-1.0-9B-MTP-GGUF`](https://huggingface.co/protoLabsAI/Ornith-1.0-9B-MTP-GGUF) — a 9B with a multi-token-prediction head we trained for it; the base shipped without one. KL-divergence against the target distribution gets ~76% token acceptance, for a lossless +49–57% single-stream speedup (75 → 121 tok/s). Packaged for llama.cpp and Ollama — the build most people run; the [raw MTP head](https://huggingface.co/protoLabsAI/Ornith-1.0-9B-MTP) is up too. MIT.
 - [`Ornith-1.0-35B-FP8`](https://huggingface.co/protoLabsAI/Ornith-1.0-35B-FP8) — the 35B in native FP8 E4M3, half the VRAM at full speed.
-- Our most-pulled build so far is an [FP8 quant of a Qwen3.6-35B MoE fine-tune](https://huggingface.co/protoLabsAI/Qwen3.6-35B-A3B-uncensored-heretic-FP8) — 66 GB down to 34 GB, 180 → 226 tok/s, 2k+ downloads.
+- Our most-pulled build so far is an [FP8 quant of a Qwen3.6-35B MoE fine-tune](https://huggingface.co/protoLabsAI/Qwen3.6-35B-A3B-uncensored-heretic-FP8) — 66 GB down to 34 GB, 180 → 226 tok/s, 13k+ downloads.
 
 The findings behind them get written up at [protolabs.studio](https://protolabs.studio): CUDA graphs run 37–470% faster on Blackwell, INT4 holds quality on dense models but corrupts MoE expert routing (so MoE stays BF16), and `NCCL_P2P_DISABLE=1` clears TP=2 corruption on PCIe Blackwell for a 9.3× jump on the 35B MoE.
 
