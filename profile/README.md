@@ -16,6 +16,16 @@ Infrastructure we ship as patterns to study and steal, not products you wait on 
 - [`protoBanana`](https://github.com/protoLabsAI/protoBanana) — chat-native image generation and editing, served as an OpenAI-compatible provider on top of ComfyUI.
 - [`protoWorkstacean`](https://github.com/protoLabsAI/protoWorkstacean) — a pluggable pubsub bus for agentic action.
 
+## Open weights on Hugging Face
+
+We run 35B-class open models on a pair of prosumer GPUs, and the builds that make that possible — FP8 quants and speculative-decode heads — go up for anyone to pull. [`huggingface.co/protoLabsAI`](https://huggingface.co/protoLabsAI).
+
+- [`Ornith-1.0-9B-MTP-GGUF`](https://huggingface.co/protoLabsAI/Ornith-1.0-9B-MTP-GGUF) — a 9B with a multi-token-prediction head we trained for it; the base shipped without one. KL-divergence against the target distribution gets ~76% token acceptance, for a lossless +49–57% single-stream speedup (75 → 121 tok/s). Packaged for llama.cpp and Ollama — the build most people run; the [raw MTP head](https://huggingface.co/protoLabsAI/Ornith-1.0-9B-MTP) is up too. MIT.
+- [`Ornith-1.0-35B-FP8`](https://huggingface.co/protoLabsAI/Ornith-1.0-35B-FP8) — the 35B in native FP8 E4M3, half the VRAM at full speed.
+- Our most-pulled build so far is an [FP8 quant of a Qwen3.6-35B MoE fine-tune](https://huggingface.co/protoLabsAI/Qwen3.6-35B-A3B-uncensored-heretic-FP8) — 66 GB down to 34 GB, 180 → 226 tok/s, 13k+ downloads.
+
+The findings behind them get written up at [protolabs.studio](https://protolabs.studio): CUDA graphs run 37–470% faster on Blackwell, INT4 holds quality on dense models but corrupts MoE expert routing (so MoE stays BF16), and `NCCL_P2P_DISABLE=1` clears TP=2 corruption on PCIe Blackwell for a 9.3× jump on the 35B MoE.
+
 ## The engine
 
 [`protoAgent`](https://github.com/protoLabsAI/protoAgent) is the adaptable engine: a lean, A2A-native agent on LangGraph that ships a small core and grows at runtime instead of by forking. Capability arrives three ways — **plugins** install from a git URL (tools, subagents, MCP servers, console views), **skills** load on demand as the model needs them, and **delegate agents** route work out over A2A, the OpenAI-compatible API, or ACP, so it can spawn other coding agents (protoCLI, Claude Code) as subprocesses. Run one agent or orchestrate a fleet; drive it from the console, the API, or A2A. The boring parts — A2A spec handling, cost and extension emission, tracing, the release pipeline — stay stable across every agent, so forking is close to a rewrite of `SOUL.md` and a couple of files, not inheriting a pile.
@@ -60,6 +70,7 @@ One person and a fleet of agents. We keep the numbers visible because a claim wi
 
 - [**protolabs.studio**](https://protolabs.studio) — home and blog
 - [**hello@protolabs.consulting**](mailto:hello@protolabs.consulting) — consulting: pattern transfer, not retainer work
+- [**Hugging Face**](https://huggingface.co/protoLabsAI) — open model weights: FP8 quants and MTP heads
 - [**@protoLabsAI**](https://x.com/protoLabsAI) — X
 - [**Substack**](https://substack.com/@protolabsai) — long-form
 
